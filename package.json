@@ -1,0 +1,17 @@
+{
+  "name": "press16",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @press16/web",
+    "dev:api": "npm run dev -w @press16/api",
+    "build": "npm run build -w @press16/web",
+    "start": "npm run build && npm start -w @press16/api",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}
